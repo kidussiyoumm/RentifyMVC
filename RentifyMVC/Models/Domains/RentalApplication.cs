@@ -4,20 +4,20 @@
     {
 
         public int applicationID { get; set; }
-        public string Status { get; set; } // Pending, Approved, Rejected
+        public string status { get; set; } // Pending, Approved, Rejected
 
-        public DateTime ApplicationDate { get; set; }
+        public DateTime applicationDate { get; set; }
 
-        public DateTime? MoveInDate { get; set; }
+        public DateTime? moveInDate { get; set; }
 
-        public string Notes { get; set; }
+        public string? notes { get; set; }
 
 
         public int userID { get; set; }
         public virtual User User { get; set; } // Foreign key to User
 
-        public int PropertyID { get; set; } // Foreign key to Property
-        public virtual Property Property { get; set; } // Navigation property to Property
+        public int propertyID { get; set; } // Foreign key to Property
+        public virtual Property property { get; set; } // Navigation property to Property
 
 
 

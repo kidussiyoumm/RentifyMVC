@@ -29,18 +29,26 @@ namespace Rentify.Models.Domains
 
         public int numberOfBathrooms { get; set; }
 
-        public bool IsAvailable { get; set; }
+        public bool ssAvailable { get; set; }
 
-        public DateTime? DateAvailable { get; set; }
+        public DateTime? dateAvailable { get; set; }
 
         // Foreign keys
-        public int UserID { get; set; } // Foreign key to User
-        public int AgentID { get; set; } // Foreign key to Agent
+        public int userID { get; set; } // Foreign key to User
+        public int agentID { get; set; } // Foreign key to Agent
 
-        public virtual User User { get; set; } // Navigation property to User
-        public virtual Agent Agent { get; set; } // Navigation property to Agent
-        public virtual ICollection<RentalApplication> RentalApplications { get; set; } // One-to-many with RentalApplication
-        public virtual ICollection<Review> Reviews { get; set; } // One-to-many with Review
+        public virtual User user { get; set; } // Navigation property to User
+        public virtual Agent agent { get; set; } // Navigation property to Agent
+       
+        
+        public virtual List<RentalApplication> RentalApplications { get; set; } // One-to-many with RentalApplication
+        public virtual List<Review> Review { get; set; } // One-to-many with Review
 
+
+        public Property()
+        {
+            Review = new List<Review>();
+            RentalApplications = new List<RentalApplication>();
+        }
     }
 }

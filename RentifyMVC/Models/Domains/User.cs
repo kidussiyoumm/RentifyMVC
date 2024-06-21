@@ -21,9 +21,15 @@ namespace Rentify.Models.Domains
         [Required]
         public string Role { get; set; } // Assuming roles are strings like "User" or "Admin"
 
-        public virtual ICollection<Property> Properties { get; set; } // One-to-many with Property
-        public virtual ICollection<Agent> Agents { get; set; } // Many-to-many with Agent
+        public virtual List<Property> Properties { get; set; } // One-to-many with Property
+        public virtual List<Agent> Agents { get; set; } // Many-to-many with Agent
 
 
+
+        public User()
+        {
+            Properties = new List<Property>();
+            Agents = new List<Agent>();
+        }
     }
 }
