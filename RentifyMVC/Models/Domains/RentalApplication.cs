@@ -1,9 +1,14 @@
-﻿namespace Rentify.Models.Domains
+﻿using System.ComponentModel.DataAnnotations;
+
+
+
+namespace Rentify.Models.Domains
+
 {
     public class RentalApplication
     {
-
-        public int applicationID { get; set; }
+        [Key]
+        public int applicationId { get; set; }
         public string status { get; set; } // Pending, Approved, Rejected
 
         public DateTime applicationDate { get; set; }

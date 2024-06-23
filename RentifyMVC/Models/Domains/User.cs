@@ -4,6 +4,7 @@ namespace Rentify.Models.Domains
 {
     public class User
     {
+        [Key]
         public int userID { get; set; }
 
         [Required]

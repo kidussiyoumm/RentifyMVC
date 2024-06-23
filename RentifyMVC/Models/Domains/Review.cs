@@ -4,6 +4,7 @@ namespace Rentify.Models.Domains
 {
     public class Review
     {
+        [Key]
         public int reviewID { get; set; }
        
         [Range(1, 5)]

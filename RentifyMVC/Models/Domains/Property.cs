@@ -5,7 +5,7 @@ namespace Rentify.Models.Domains
 {
     public class Property
     {
-
+        [Key]
         public int propertyID { get; set; }
 
         [Required]
