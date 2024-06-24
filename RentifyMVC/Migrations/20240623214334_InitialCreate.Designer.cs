@@ -11,7 +11,7 @@ using RentifyMVC.Data;
 
 namespace RentifyMVC.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(RentifyDbContext))]
     [Migration("20240623214334_InitialCreate")]
     partial class InitialCreate
     {

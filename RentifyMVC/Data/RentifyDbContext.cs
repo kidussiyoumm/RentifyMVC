@@ -6,9 +6,9 @@ using System.Security.Cryptography.X509Certificates;
 namespace RentifyMVC.Data
 
 {
-    public class ApplicationDbContext : DbContext
+    public class RentifyDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) //Pass it to DbContext class
+        public RentifyDbContext(DbContextOptions<RentifyDbContext> options) : base(options) //Pass it to DbContext class
         { 
             
         }
